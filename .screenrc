@@ -1,0 +1,10 @@
+escape ^Jj
+autodetach on
+bind l windowlist
+vbell off
+defutf8 on
+defkanji utf-8
+encoding utf-8 utf-8
+defencoding utf-8
+startup_message off
+hardstatus alwayslastline "%{= wk} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d %{=b wb}%c"
