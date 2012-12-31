@@ -1,0 +1,17 @@
+" Let NeoBundle manage NeoBundle
+"NeoBundle 'Shougo/neobundle.vim'
+
+" Recommended to install
+" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+
+" Color Scheme
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'vim-scripts/Lucius'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
+
+" FileType Plugins
+NeoBundle 'vim-ruby/vim-ruby'
