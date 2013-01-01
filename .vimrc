@@ -22,8 +22,7 @@ filetype plugin indent on
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()
-  echomsg 'Not installed bundles : ' .
-        \string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Not installed bundles : ' . string(neobundle#get_not_installed_bundle_names())
   echomsg 'Please execute ":NeoBundleInstall" command.'
 endif
 
@@ -42,7 +41,7 @@ set autoindent
 set t_Co=256
 syntax enable
 set background=dark
-colorscheme molokai
+silent! colorscheme molokai
 
 set hlsearch
 set termencoding=utf-8
@@ -77,8 +76,6 @@ autocmd BufNewFile,BufRead *.thtml  set filetype=php
 autocmd BufNewFile,BufRead *.wsgi   set filetype=python
 autocmd BufNewFile,BufRead *.zj     set filetype=ruby
 
-
-
 " Search Configurations
 " ---------------------
 noremap n nzz
@@ -109,8 +106,8 @@ noremap <Space>C :call OpenLeftTab()<Return><C-g>
 noremap <Space>t :tabedit #<Return><C-g>
 
 
-" Vim Configurations
-" ==================
+" Recently Configurations
+" =======================
 
 " vim-users.jp/hack74 
 " -------------------
@@ -135,6 +132,10 @@ endif
 " Usage: :Rename newfilename.txt
 command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
 
+" vim-users.jp/hack122
+" --------------------
+nnoremap Y y$
+
 
 " Plugin Configurations
 " =====================
@@ -143,10 +144,12 @@ command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
 " ---------
 let g:unite_enable_start_insert=1
 let g:unite_enable_split_vertically=0
-nnoremap <silent> <C-n>      :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-inoremap <silent> <C-n> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+let g:unite_source_file_mru_time_format='(%Y/%m/%d %T) '
+nnoremap <silent> <C-n>      :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+inoremap <silent> <C-n> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 nnoremap <silent> <C-p>      :<C-u>Unite buffer file_mru<CR>
 inoremap <silent> <C-p> <ESC>:<C-u>Unite buffer file_mru<CR>
+nnoremap <silent> <C-t>      :<C-u>Unite tab<CR>
 
 " neocomplcache
 " -------------
