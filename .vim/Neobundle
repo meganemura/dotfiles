@@ -1,3 +1,5 @@
+" vim: set filetype=vim:
+
 " Let NeoBundle manage NeoBundle
 "NeoBundle 'Shougo/neobundle.vim'
 
