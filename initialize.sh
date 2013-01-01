@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
-DOTFILES_ROOT=$(dirname $0)
+DOTFILES_ROOT=$(cd $(dirname $0); pwd)
 cd $DOTFILES_ROOT
 
 # Dotfiles
