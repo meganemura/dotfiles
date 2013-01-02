@@ -18,3 +18,6 @@ NeoBundle 'tomasr/molokai'
 " FileType Plugins
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-markdown'
+
+" Utilities
+NeoBundle 'tpope/vim-rails'
