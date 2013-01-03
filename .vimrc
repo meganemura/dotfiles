@@ -105,7 +105,7 @@ nmap <ESC><ESC> :nohlsearch<Return><ESC>
 " ----------------------
 set showtabline=2 " Always show tabline
 set guioptions-=e
-noremap <Space>d :q<Return><C-g>
+noremap <Space>d :quit<Return><C-g>
 noremap <Space>n :tabnext<Return><C-g>
 noremap <Space>p :tabprevious<Return><C-g>
 noremap <Space>c :tabedit<Return><C-g>
