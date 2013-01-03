@@ -18,6 +18,7 @@ NeoBundle 'tomasr/molokai'
 " FileType Plugins
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'cakebaker/scss-syntax.vim'
 
 " Utilities
 NeoBundle 'tpope/vim-rails'
