@@ -43,7 +43,6 @@ syntax enable
 set background=dark
 silent! colorscheme molokai
 
-set hlsearch
 set termencoding=utf-8
 set encoding=utf-8
 set fileencoding=japan
@@ -93,6 +92,9 @@ autocmd BufNewFile,BufRead *.zj     set filetype=ruby
 
 " Search Configurations
 " ---------------------
+set smartcase
+set incsearch
+set hlsearch
 noremap n nzz
 noremap N Nzz
 noremap * *zz
