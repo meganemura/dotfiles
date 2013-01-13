@@ -19,6 +19,11 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'skwp/vim-rspec'
 
 " Utilities
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'timcharper/textile.vim'
+NeoBundle 'vim-scripts/camelcasemotion'
+NeoBundle 'Lokaltog/vim-easymotion'
