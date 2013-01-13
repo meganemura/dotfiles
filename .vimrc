@@ -14,6 +14,8 @@ endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
+let g:neobundle_default_git_protocol='https'
+
 if filereadable(expand('~/.vim/Neobundle'))
     source ~/.vim/Neobundle
 endif
@@ -51,6 +53,8 @@ set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,
 
 set wildmode=list:longest,full
 set wildignore+=*.pyc
+
+set nrformats=hex
 
 set nobackup
 set directory=~/.vim/tmp
@@ -171,3 +175,7 @@ nnoremap <silent> <C-t>      :<C-u>Unite tab<CR>
 " neocomplcache
 " -------------
 let g:neocomplcache_enable_at_startup=1
+
+" easymotion
+" ----------
+let g:EasyMotion_keys = 'fjdkslaureiwoqpvncm'
