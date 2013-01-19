@@ -90,10 +90,6 @@ highlight CursorLine ctermbg=black guibg=black
 
 highlight TODO ctermfg=red guifg=red
 
-autocmd BufNewFile,BufRead *.thtml  set filetype=php
-autocmd BufNewFile,BufRead *.wsgi   set filetype=python
-autocmd BufNewFile,BufRead *.zj     set filetype=ruby
-
 " Search Configurations
 " ---------------------
 set smartcase
@@ -179,3 +175,20 @@ let g:neocomplcache_enable_at_startup=1
 " easymotion
 " ----------
 let g:EasyMotion_keys = 'fjdkslaureiwoqpvncm'
+
+" ftdetects
+" ---------
+augroup MyFileTypeDetect
+    autocmd!
+
+    autocmd BufNewFile,BufRead *.wsgi   set filetype=python
+    autocmd BufNewFile,BufRead *.zj     set filetype=ruby
+
+    " tracwiki
+    autocmd BufNewFile,BufRead [tT]icket_*.txt setfiletype tracwiki
+    autocmd BufNewFile,BufRead [tT]icket_*.txt set shiftwidth=2
+
+    " textile
+    autocmd! BufNewFile,BufRead [iI]ssue_*.txt setfiletype textile
+    autocmd! BufNewFile,BufRead [rR]edmine_*.txt setfiletype textile
+augroup END
