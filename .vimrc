@@ -20,7 +20,9 @@ if filereadable(expand('~/.vim/Neobundle'))
     source ~/.vim/Neobundle
 endif
 
-filetype plugin indent on
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()
@@ -32,8 +34,8 @@ endif
 " Basic Configurations
 " ====================
 set tabstop=8
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 
