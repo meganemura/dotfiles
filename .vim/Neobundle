@@ -20,7 +20,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'skwp/vim-rspec'
-NeoBundle 'vim-scripts/tracwiki'
+NeoBundle 'meganemura/tracwiki'
 NeoBundle 'uarun/vim-protobuf'
 
 " Utilities
