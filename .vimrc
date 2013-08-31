@@ -34,6 +34,15 @@ endif
 set nobackup
 set directory=~/.vim/tmp
 
+" vim-users.jp/hack162
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  augroup vimrc-undofile
+    autocmd!
+    autocmd BufReadPre ~/* setlocal undofile
+  augroup END
+endif
+
 set tabstop=8
 set softtabstop=2
 set shiftwidth=2
@@ -70,7 +79,6 @@ silent! colorscheme molokai
 
 " Mouse Support
 " -------------
-
 " See https://wincent.com/blog/tweaking-command-t-and-vim-for-use-in-the-terminal-and-tmux
 if has('mouse')
   set mouse=a
@@ -141,11 +149,8 @@ noremap <Leader>C :<C-u>call <SID>left_tabnew()<Return>
 imap <silent> <C-d><C-d> <C-r>=strftime("%Y-%m-%d")<Return>
 
 
-" Configured recently
-" ===================
-
-" vim-users.jp/hack74 
-" -------------------
+" Easy to edit vimrc (vim-users.jp/hack74)
+" ----------------------------------------
 nnoremap <silent> <Leader>ev :<C-u>edit $MYVIMRC<Return>
 
 " Set augroup.
@@ -163,14 +168,14 @@ else
 endif
 
 
-" vim-users.jp/hack17
-" -------------------
+" Rename file (vim-users.jp/hack17)
+" ---------------------------------
 " Usage: :Rename newfilename.txt
 command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
 
 
-" vim-users.jp/hack122
-" --------------------
+" Yank until the end of line (vim-users.jp/hack122)
+" -------------------------------------------------
 nnoremap Y y$
 
 

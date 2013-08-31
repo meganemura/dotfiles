@@ -14,26 +14,31 @@ dotfiles=(
     .screenrc
 )
 for dotfile in ${dotfiles[@]}; do
-    ln -s $DOTFILES_ROOT/$dotfile ~/$dotfile || true
+    ln -sfh $DOTFILES_ROOT/$dotfile ~/$dotfile || true
 done
 
 # Vim
 # ===
+echo "setup vim (this may take a while)"
 VIM_ROOT=$DOTFILES_ROOT/.vim
 
-for tmpdir in bundle tmp; do
+for tmpdir in tmp undo; do
     rm -rf $VIM_ROOT/$tmpdir
     mkdir -p $VIM_ROOT/$tmpdir
 done
 
+mkdir -p $VIM_ROOT/bundle
 git submodule init
 git submodule update
 
-# vim -c "silent! NeoBundleInstall" -c quit
-vim -c "NeoBundleInstall" -c quit
+vim -c "silent! NeoBundleInstall" -c quit > /dev/null 2>&1
+
 cd $VIM_ROOT/bundle/vimproc
-case "$(uname)" in
+(case "$(uname)" in
     "Linux"  ) make -f make_unix.mak ;;
     "Darwin" ) make -f make_mac.mak ;;
-esac
-cd -
+esac) > /dev/null
+cd - > /dev/null
+
+
+echo "Initialized."
