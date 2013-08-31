@@ -33,12 +33,13 @@ git submodule update
 
 vim -c "silent! NeoBundleInstall" -c quit > /dev/null 2>&1
 
-cd $VIM_ROOT/bundle/vimproc
-(case "$(uname)" in
-    "Linux"  ) make -f make_unix.mak ;;
-    "Darwin" ) make -f make_mac.mak ;;
-esac) > /dev/null
-cd - > /dev/null
+(
+  cd $VIM_ROOT/bundle/vimproc
+  case "$(uname)" in
+      "Linux"  ) make -f make_unix.mak ;;
+      "Darwin" ) make -f make_mac.mak ;;
+  esac
+) > /dev/null
 
 
 echo "Initialized."
