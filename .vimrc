@@ -1,10 +1,8 @@
-" Vimrc
-" =====
-
+" boot
 autocmd!
 
-" NeoBundle Configurations
-" ========================
+" NeoBundle
+" ---------
 set nocompatible
 filetype off
 
@@ -17,7 +15,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 let g:neobundle_default_git_protocol='https'
 
 if filereadable(expand('~/.vim/Neobundle'))
-    source ~/.vim/Neobundle
+  source ~/.vim/Neobundle
 endif
 
 filetype on           " Enable filetype detection
@@ -31,8 +29,11 @@ if neobundle#exists_not_installed_bundles()
 endif
 
 
-" Basic Configurations
-" ====================
+" tab, encoding, etc...
+" ------------------
+set nobackup
+set directory=~/.vim/tmp
+
 set tabstop=8
 set softtabstop=2
 set shiftwidth=2
@@ -42,31 +43,33 @@ set smarttab
 set smartindent
 set autoindent
 
-set t_Co=256
-syntax enable
-set background=dark
-silent! colorscheme molokai
-
 set termencoding=utf-8
 set encoding=utf-8
 set fileencoding=japan
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
+autocmd BufWritePre * :%s/\s\+$//e
 
 set wildmode=list:longest,full
 set wildignore+=*.pyc
 
 set nrformats=hex
 
-set nobackup
-set directory=~/.vim/tmp
+set ambiwidth=double
 
+let mapleader = "\<Space>"
+inoremap # a<BS>#
 set pastetoggle=<F1>
 
-inoremap # a<BS>#
+set laststatus=2
+set t_Co=256
+set background=dark
+syntax enable
+silent! colorscheme molokai
+
 
 " Mouse Support
-" =============
+" -------------
 
 " See https://wincent.com/blog/tweaking-command-t-and-vim-for-use-in-the-terminal-and-tmux
 if has('mouse')
@@ -77,11 +80,12 @@ if has('mouse')
     " makes tmux enter copy mode instead of selecting or scrolling
     " inside Vim -- but luckily, setting it up from within autocmds
     " works
-    autocmd VimEnter * set ttymouse=xterm2
+    autocmd VimEnter    * set ttymouse=xterm2
     autocmd FocusGained * set ttymouse=xterm2
-    autocmd BufEnter * set ttymouse=xterm2
+    autocmd BufEnter    * set ttymouse=xterm2
   endif
 endif
+
 
 " CursorLine
 " ----------
@@ -92,8 +96,9 @@ highlight CursorLine ctermbg=black guibg=black
 
 highlight TODO ctermfg=red guifg=red
 
-" Search Configurations
-" ---------------------
+
+" Search
+" ------
 set smartcase
 set incsearch
 set hlsearch
@@ -101,55 +106,68 @@ noremap n nzz
 noremap N Nzz
 noremap * *zz
 noremap # #zz
-nmap <ESC><ESC> :nohlsearch<Return><ESC>
+nnoremap <ESC><ESC> :<C-u>nohlsearch<Return><ESC>
+inoremap <ESC>      <ESC>:nohlsearch<Return><ESC>
 
-" Tabpage Configurations
-" ----------------------
+
+" Tabpage
+" -------
 set showtabline=2 " Always show tabline
 set guioptions-=e
-noremap <Space>d :quit<Return><C-g>
-noremap <Space>n :tabnext<Return><C-g>
-noremap <Space>p :tabprevious<Return><C-g>
-noremap <Space>c :tabedit<Return><C-g>
 
-function! OpenLeftTab()
-    if tabpagenr() == 1
-        0tabedit
-    else
-        tabprevious
-        tabedit
-    endif
+noremap <Leader>c :<C-u>tabnew<Return>
+noremap <Leader>d :<C-u>quit<Return>
+noremap <Leader>n :<C-u>tabnext<Return>
+noremap <Leader>p :<C-u>tabprevious<Return>
+noremap <Leader>q :<C-u>tabonly<Return>:quit<Return>
+
+" vim >= 7.3
+noremap <Leader>> :<C-u>tabmove +1<Return>
+noremap <Leader>< :<C-u>tabmove -1<Return>
+
+function! s:left_tabnew()
+  if tabpagenr() == 1
+    0tabnew
+  else
+    tabprevious
+    tabnew
+  endif
 endfunction
-noremap <Space>C :call OpenLeftTab()<Return><C-g>
-" Open most recent edited tab.
-noremap <Space>t :tabedit #<Return><C-g>
+noremap <Leader>C :<C-u>call <SID>left_tabnew()<Return>
 
 
-" Recently Configurations
-" =======================
+" Utility
+" -------
+imap <silent> <C-d><C-d> <C-r>=strftime("%Y-%m-%d")<Return>
+
+
+" Configured recently
+" ===================
 
 " vim-users.jp/hack74 
 " -------------------
-nnoremap <silent> <Space>ev :<C-u>edit $MYVIMRC<CR>
+nnoremap <silent> <Leader>ev :<C-u>edit $MYVIMRC<Return>
 
 " Set augroup.
 augroup MyAutoCmd
-    autocmd!
+  autocmd!
 augroup END
 
 if !has('gui_running') && !(has('win32') || has('win64'))
-    " .vimrcの再読込時にも色が変化するようにする
-    autocmd MyAutoCmd BufWritePost $MYVIMRC nested source $MYVIMRC
+  " .vimrcの再読込時にも色が変化するようにする
+  autocmd MyAutoCmd BufWritePost $MYVIMRC nested source $MYVIMRC
 else
-    " .vimrcの再読込時にも色が変化するようにする
-    autocmd MyAutoCmd BufWritePost $MYVIMRC source $MYVIMRC | if has('gui_running') | source $MYGVIMRC  
-    autocmd MyAutoCmd BufWritePost $MYGVIMRC if has('gui_running') | source $MYGVIMRC
+  " .vimrcの再読込時にも色が変化するようにする
+  autocmd MyAutoCmd BufWritePost $MYVIMRC source $MYVIMRC | if has('gui_running') | source $MYGVIMRC
+  autocmd MyAutoCmd BufWritePost $MYGVIMRC if has('gui_running') | source $MYGVIMRC
 endif
+
 
 " vim-users.jp/hack17
 " -------------------
 " Usage: :Rename newfilename.txt
 command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
+
 
 " vim-users.jp/hack122
 " --------------------
@@ -170,27 +188,34 @@ nnoremap <silent> <C-p>      :<C-u>Unite buffer file_mru<CR>
 inoremap <silent> <C-p> <ESC>:<C-u>Unite buffer file_mru<CR>
 nnoremap <silent> <C-t>      :<C-u>Unite tab<CR>
 
+
 " neocomplcache
 " -------------
 let g:neocomplcache_enable_at_startup=1
 
+
 " easymotion
 " ----------
 let g:EasyMotion_keys = 'fjdkslaureiwoqpvncm'
+" memo: <>
+
 
 " ftdetects
 " ---------
 augroup MyFileTypeDetect
-    autocmd!
+  autocmd!
 
-    autocmd BufNewFile,BufRead *.wsgi   set filetype=python
-    autocmd BufNewFile,BufRead *.zj     set filetype=ruby
+  autocmd BufNewFile,BufRead *.wsgi set filetype=python
+  autocmd BufNewFile,BufRead *.zj   set filetype=ruby
+  autocmd BufNewFile,BufRead *.json set filetype=javascript
 
-    " tracwiki
-    autocmd BufNewFile,BufRead [tT]icket_*.txt setfiletype tracwiki
-    autocmd BufNewFile,BufRead [tT]icket_*.txt set shiftwidth=2
+  " tracwiki
+  autocmd BufNewFile,BufRead [tT]icket_*.txt  setfiletype tracwiki
+  autocmd BufNewFile,BufRead [tT]icket_*.txt  set shiftwidth=2
+  autocmd BufNewFile,BufRead *.wiki           setfiletype tracwiki
+  autocmd BufNewFile,BufRead *.wiki           set shiftwidth=2
 
-    " textile
-    autocmd! BufNewFile,BufRead [iI]ssue_*.txt setfiletype textile
-    autocmd! BufNewFile,BufRead [rR]edmine_*.txt setfiletype textile
+  " textile
+  autocmd! BufNewFile,BufRead [iI]ssue_*.txt    setfiletype textile
+  autocmd! BufNewFile,BufRead [rR]edmine_*.txt  setfiletype textile
 augroup END
