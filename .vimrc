@@ -115,7 +115,6 @@ noremap N Nzz
 noremap * *zz
 noremap # #zz
 nnoremap <ESC><ESC> :<C-u>nohlsearch<Return><ESC>
-inoremap <ESC>      <ESC>:nohlsearch<Return><ESC>
 
 
 " Tabpage
