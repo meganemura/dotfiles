@@ -223,3 +223,8 @@ augroup MyFileTypeDetect
   autocmd! BufNewFile,BufRead [iI]ssue_*.txt    setfiletype textile
   autocmd! BufNewFile,BufRead [rR]edmine_*.txt  setfiletype textile
 augroup END
+
+
+if filereadable(expand('~/.vim/local.vim'))
+    source ~/.vim/local.vim
+endif
