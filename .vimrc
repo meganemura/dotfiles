@@ -124,6 +124,7 @@ set guioptions-=e
 
 noremap <Leader>c :<C-u>tabnew<Return>
 noremap <Leader>d :<C-u>quit<Return>
+noremap <Leader>D :<C-u>quit!<Return>
 noremap <Leader>n :<C-u>tabnext<Return>
 noremap <Leader>p :<C-u>tabprevious<Return>
 noremap <Leader>q :<C-u>tabonly<Return>:quit<Return>
@@ -201,7 +202,12 @@ let g:neocomplcache_enable_at_startup=1
 " easymotion
 " ----------
 let g:EasyMotion_keys = 'fjdkslaureiwoqpvncm'
-" memo: <>
+
+
+" vim-airline
+" -----------
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 
 " ftdetects
