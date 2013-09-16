@@ -33,3 +33,7 @@ NeoBundle 'vim-scripts/camelcasemotion'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'vim-scripts/svn-diff.vim'
 NeoBundle 'bling/vim-airline'
+
+" Snippet
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'rcyrus/snipmate-snippets-rubymotion'
