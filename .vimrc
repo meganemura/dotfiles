@@ -74,7 +74,8 @@ set laststatus=2
 set t_Co=256
 set background=dark
 syntax enable
-silent! colorscheme molokai
+"silent! colorscheme molokai
+colorscheme desert
 
 
 " Mouse Support
@@ -199,6 +200,10 @@ nnoremap <silent> <C-t>      :<C-u>Unite tab<CR>
 let g:neocomplcache_enable_at_startup=1
 
 
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+
+
 " easymotion
 " ----------
 let g:EasyMotion_keys = 'fjdkslaureiwoqpvncm'
@@ -208,26 +213,6 @@ let g:EasyMotion_keys = 'fjdkslaureiwoqpvncm'
 " -----------
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
-
-" neosnippet
-" ----------
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
 
 " ftdetects
 " ---------

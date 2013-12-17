@@ -7,7 +7,7 @@
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplete'
 
 " Color Scheme
 NeoBundle 'ujihisa/unite-colorscheme'
@@ -35,5 +35,3 @@ NeoBundle 'vim-scripts/svn-diff.vim'
 NeoBundle 'bling/vim-airline'
 
 " Snippet
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'rcyrus/snipmate-snippets-rubymotion'
