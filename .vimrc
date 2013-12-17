@@ -116,6 +116,7 @@ noremap N Nzz
 noremap * *zz
 noremap # #zz
 nnoremap <ESC><ESC> :<C-u>nohlsearch<Return><ESC>
+noremap <F5> :e<Return>zz
 
 
 " Tabpage
@@ -128,7 +129,8 @@ noremap <Leader>d :<C-u>quit<Return>
 noremap <Leader>D :<C-u>quit!<Return>
 noremap <Leader>n :<C-u>tabnext<Return>
 noremap <Leader>p :<C-u>tabprevious<Return>
-noremap <Leader>q :<C-u>tabonly<Return>:quit<Return>
+noremap <Leader>q :<C-u>:quitall<Return>
+
 
 " vim >= 7.3
 noremap <Leader>> :<C-u>tabmove +1<Return>
@@ -238,3 +240,26 @@ augroup END
 if filereadable(expand('~/.vim/local.vim'))
     source ~/.vim/local.vim
 endif
+
+" fix typo
+" abbreviate: insert and command line mode
+" iabbrev:    insert mode
+" cabbrev:    command line mode
+iabbrev fitler  filter
+iabbrev Usre    User
+iabbrev usre    user
+iabbrev usre_id user_id
+
+" define commands for typo
+" http://vim-jp.org/vimdoc-ja/map.html#user-commands
+command! -bang E e<bang>
+command! -bang Q q<bang>
+command! -bang W w<bang>
+command! -bang QA qa<bang>
+command! -bang Qa qa<bang>
+command! -bang Wa wa<bang>
+command! -bang WA wa<bang>
+command! -bang Wq wq<bang>
+command! -bang WQ wq<bang>
+command! -bang Lw w<bang>
+command! -bang LW w<bang>
