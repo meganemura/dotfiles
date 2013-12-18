@@ -1,0 +1,33 @@
+# # put below lines to '.gitconfig'
+# [include]
+#         path = ~/.git_aliases
+[alias]
+        alias = !cat ~/.gitconfig
+        b     = branch
+        br    = branch
+        bra   = branch
+        m     = branch --verbose  # branch with more info
+        mr    = branch --verbose  # branch with more info
+        co    = checkout
+        dc    = diff --cached
+        di    = diff
+        l     = log --oneline
+        lo    = log --oneline
+        logs  = log --stat=80,200
+        lp    = log --patch --stat=80,200
+        ml    = log --patch --stat=80,200 # log with more info
+        rb    = rebase
+        reb   = rebase
+        reba  = rebase
+        s     = status --short
+        st    = status
+        sr    = svn rebase  # git-svn
+        view  = log --all --decorate --graph --oneline
+
+        # typo fixes
+        lgo   = log
+        lgos  = logs
+        hsow  = show
+        shwo  = show
+        stl   = !clear && git status  # 'git st <C-l>'
+        t     = status   # use with `alias gits='git'`
