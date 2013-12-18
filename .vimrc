@@ -221,6 +221,7 @@ let g:airline#extensions#tabline#enabled = 1
 augroup MyFileTypeDetect
   autocmd!
 
+  autocmd BufNewFile,BufRead .git_* set filetype=gitconfig
   autocmd BufNewFile,BufRead *.wsgi set filetype=python
   autocmd BufNewFile,BufRead *.zj   set filetype=ruby
   autocmd BufNewFile,BufRead *.json set filetype=javascript
