@@ -7,11 +7,13 @@ cd $DOTFILES_ROOT
 # Dotfiles
 # ========
 dotfiles=(
+    .bash_aliases
     .gemrc
-    .vimrc
-    .vim
-    .tmux.conf
+    .git_aliases
     .screenrc
+    .tmux.conf
+    .vim
+    .vimrc
 )
 for dotfile in ${dotfiles[@]}; do
     ln -sfh $DOTFILES_ROOT/$dotfile ~/$dotfile || true
