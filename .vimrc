@@ -264,3 +264,11 @@ command! -bang Wq wq<bang>
 command! -bang WQ wq<bang>
 command! -bang Lw w<bang>
 command! -bang LW w<bang>
+
+" QuickFix
+set grepprg=grep\ -rnH
+noremap <Leader>g :<C-u>:copen<Return>
+
+" fugitive
+noremap <Leader><Leader>s :<C-u>:Gstatus<Return>
+noremap <Leader><Leader>d :<C-u>:Gdiff<Return>
