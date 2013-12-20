@@ -272,3 +272,6 @@ noremap <Leader>g :<C-u>:copen<Return>
 " fugitive
 noremap <Leader><Leader>s :<C-u>:Gstatus<Return>
 noremap <Leader><Leader>d :<C-u>:Gdiff<Return>
+
+" matchit.vim
+source $VIMRUNTIME/macros/matchit.vim

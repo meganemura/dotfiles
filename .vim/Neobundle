@@ -33,5 +33,7 @@ NeoBundle 'vim-scripts/camelcasemotion'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'vim-scripts/svn-diff.vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'houtsnip/vim-emacscommandline'
+NeoBundle 'vimtaku/hl_matchit.vim'
 
 " Snippet
