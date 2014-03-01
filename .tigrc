@@ -1,0 +1,33 @@
+# Tig Configuration
+
+set show-author       = email-user
+set show-date         = false  # no need?
+set show-refs         = true
+set show-id           = true
+
+set line-graphics     = ascii
+set split-view-height = 80%
+
+# Key binding
+#   bind keymap key action
+
+## Remove default key bindings {
+bind generic PageUp   none
+bind generic PageDown none
+bind generic ^U       none
+bind generic ^D       none
+bind generic Up       none
+bind generic Down     none
+bind generic Space    none
+bind generic b        none
+bind generic -        none
+bind generic r        none
+bind generic v        none
+## }
+
+## vi like key binding
+
+bind generic g  move-first-line
+bind generic G  move-last-line
+bind generic ^F move-page-down
+bind generic ^B move-page-up
