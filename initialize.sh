@@ -11,6 +11,7 @@ dotfiles=(
     .gemrc
     .git_aliases
     .screenrc
+    .tigrc
     .tmux.conf
     .vim
     .vimrc
