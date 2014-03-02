@@ -44,4 +44,4 @@ vim -c "silent! NeoBundleInstall" -c quit > /dev/null 2>&1
 ) > /dev/null
 
 
-echo "Initialized."
+echo "Finished!"
