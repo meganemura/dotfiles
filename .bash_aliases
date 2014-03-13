@@ -3,6 +3,7 @@
 #     . ~/.bash_aliases
 # fi
 
+alias lv='lv -c'
 alias bx='bundle exec'
 
 # typo fixes
