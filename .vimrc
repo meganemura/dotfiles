@@ -275,3 +275,10 @@ noremap <Leader><Leader>d :<C-u>:Gdiff<Return>
 
 " matchit.vim
 source $VIMRUNTIME/macros/matchit.vim
+
+" increment-activator
+let g:increment_activator_filetype_candidates = {
+  \   'ruby': [
+  \     ['describe', 'context'],
+  \   ],
+  \}
