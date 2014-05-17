@@ -16,6 +16,7 @@
         logs  = log --stat=80,200
         lp    = log --patch --stat=80,200
         ml    = log --patch --stat=80,200 # log with more info
+        patches = log --patch --stat=80,200
         rb    = rebase
         reb   = rebase
         reba  = rebase
