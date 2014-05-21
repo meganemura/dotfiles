@@ -6,6 +6,12 @@
 alias lv='lv -c'
 alias bx='bundle exec'
 
+# git shortcuts
+alias di='git diff'
+alias dc='git diff --cached'  # dc(1)
+alias s='git status'
+alias m='git branch --verbose'
+
 # typo fixes
 alias gti='git'
 alias gitt='git'
