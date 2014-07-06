@@ -11,6 +11,7 @@
         co    = checkout
         dc    = diff --cached
         di    = diff
+        fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
         l     = log --oneline
         lo    = log --oneline
         logs  = log --stat=80,200
