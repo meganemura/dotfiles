@@ -14,6 +14,7 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-scripts/Lucius'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'jpo/vim-railscasts-theme'
 
 " FileType Plugins
 NeoBundle 'vim-ruby/vim-ruby'

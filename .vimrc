@@ -74,7 +74,8 @@ set t_Co=256
 set background=dark
 syntax enable
 "silent! colorscheme molokai
-colorscheme desert
+"colorscheme desert
+colorscheme railscasts
 
 
 " Mouse Support
