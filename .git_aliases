@@ -9,6 +9,7 @@
         m     = branch --verbose  # branch with more info
         mr    = branch --verbose  # branch with more info
         co    = checkout
+        ci    = commit --verbose
         dc    = diff --cached
         di    = diff
         fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
