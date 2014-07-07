@@ -38,5 +38,6 @@ NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'vimtaku/hl_matchit.vim'
 NeoBundle 'nishigori/increment-activator'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'kana/vim-altr'
 
 " Snippet

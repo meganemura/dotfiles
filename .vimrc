@@ -282,3 +282,10 @@ let g:increment_activator_filetype_candidates = {
   \     ['describe', 'context'],
   \   ],
   \}
+
+" vim-altr
+nmap <F2> <Plug>altr#forward()
+nmap <F3> <Plug>altr#back()
+call altr#remove_all()
+call altr#define('lib/%.rb',
+  \              'spec/%_spec.rb')
