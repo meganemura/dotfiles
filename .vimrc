@@ -22,10 +22,9 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
-" Installation check.
+" NeoBundleInstall
 if neobundle#exists_not_installed_bundles()
-  echomsg 'Not installed bundles : ' . string(neobundle#get_not_installed_bundle_names())
-  echomsg 'Please execute ":NeoBundleInstall" command.'
+  autocmd VimEnter * NeoBundleInstall
 endif
 
 
