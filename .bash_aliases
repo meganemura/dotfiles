@@ -2,6 +2,7 @@
 # if [ -f ~/.bash_aliases ]; then
 #     . ~/.bash_aliases
 # fi
+alias ll='ls -1'
 
 alias lv='lv -c'
 alias bx='bundle exec'
