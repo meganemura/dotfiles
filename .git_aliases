@@ -3,9 +3,7 @@
 #         path = ~/.git_aliases
 [alias]
         alias = !cat ~/.gitconfig
-        b     = branch
         br    = branch
-        bra   = branch
         m     = branch --verbose  # branch with more info
         mr    = branch --verbose  # branch with more info
         co    = checkout
@@ -13,15 +11,9 @@
         dc    = diff --cached
         di    = diff
         fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
-        l     = log --oneline
         lo    = log --oneline
         logs  = log --stat=80,200
-        lp    = log --patch --stat=80,200
-        ml    = log --patch --stat=80,200 # log with more info
         patches = log --patch --stat=80,200
-        rb    = rebase
-        reb   = rebase
-        reba  = rebase
         s     = status --short
         st    = status
         sr    = svn rebase  # git-svn
