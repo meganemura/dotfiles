@@ -22,3 +22,4 @@ install ruby-build
 install tig
 install tmux
 install wget
+install hub
