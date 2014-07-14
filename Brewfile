@@ -1,3 +1,6 @@
+update
+upgrade
+
 install autoconf
 install bash-completion
 install fontconfig
