@@ -8,6 +8,7 @@ install fontforge
 install freetype
 install gettext
 install git
+install hub
 install jpeg
 install libevent
 install libpng
@@ -25,4 +26,3 @@ install ruby-build
 install tig
 install tmux
 install wget
-install hub
