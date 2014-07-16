@@ -278,14 +278,14 @@ source $VIMRUNTIME/macros/matchit.vim
 
 " increment-activator
 let g:increment_activator_filetype_candidates = {
-  \   'ruby': [
-  \     ['describe', 'context'],
-  \   ],
-  \}
+\   'ruby': [
+\     ['describe', 'context'],
+\   ],
+\}
 
 " vim-altr
 nmap <F2> <Plug>altr#forward()
 nmap <F3> <Plug>altr#back()
 call altr#remove_all()
 call altr#define('lib/%.rb',
-  \              'spec/%_spec.rb')
+\                'spec/%_spec.rb')
