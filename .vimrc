@@ -280,6 +280,8 @@ source $VIMRUNTIME/macros/matchit.vim
 let g:increment_activator_filetype_candidates = {
 \   'ruby': [
 \     ['describe', 'context'],
+\     ['should',   'should_not'],
+\     ['to',       'not_to'],
 \   ],
 \}
 
