@@ -23,3 +23,6 @@ alias gits='git'
 function gi () {
   git ${@##t}
 }
+
+alias uppercase="tr '[:lower:]' '[:upper:]'"
+alias lowercase="tr '[:upper:]' '[:lower:]'"
