@@ -29,8 +29,8 @@ alias lowercase="tr '[:upper:]' '[:lower:]'"
 
 # Edit last committed files
 function el () {
-  base=$(git rev-parse --show-toplevel)
-  last_committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
+  base=$(git rev-parse --show-toplevel 2> /dev/null)
+  last_committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD 2> /dev/null)
   files=$(for file in $last_committed_files; do echo $base/$file; done)
-  vim -p $files
+  test "$files" && vim -p $files
 }
