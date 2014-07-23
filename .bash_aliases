@@ -12,6 +12,7 @@ alias di='git diff'
 alias dc='git diff --cached'  # dc(1)
 alias s='git status'
 alias m='git branch --verbose'
+alias show='git show'
 
 # typo fixes
 alias gti='git'
