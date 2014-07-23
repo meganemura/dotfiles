@@ -68,6 +68,7 @@ set ambiwidth=double
 let mapleader = "\<Space>"
 inoremap # a<BS>#
 set pastetoggle=<F1>
+nmap <Leader>l :<C-u>set invnumber<Return>
 
 set laststatus=2
 set t_Co=256
