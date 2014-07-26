@@ -8,15 +8,18 @@
         mr    = branch --verbose  # branch with more info
         co    = checkout
         ci    = commit --verbose
+        ca    = commit --verbose --amend
         dc    = diff --cached
         di    = diff
         fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
         lo    = log --oneline
         logs  = log --stat=80,200
         patches = log --patch --stat=80,200
+        prigin = !git push origin $(git branch -a | grep '^*' | cut -b 3-)
         s     = status --short
         st    = status
         sr    = svn rebase  # git-svn
+        up    = add --update
         view  = log --all --decorate --graph --oneline
 
         # typo fixes
