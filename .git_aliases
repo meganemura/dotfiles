@@ -7,6 +7,8 @@
         m     = branch --verbose  # branch with more info
         mr    = branch --verbose  # branch with more info
         co    = checkout
+        chop      = "!chop() { git checkout -b pr-${1} pull/$1/merge; }; chop"
+        chophead  = "!chop() { git checkout -b pr-${1} pull/$1/head; }; chop"
         ci    = commit --verbose
         ca    = commit --verbose --amend
         dc    = diff --cached
