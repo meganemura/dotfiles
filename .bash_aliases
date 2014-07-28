@@ -13,6 +13,7 @@ alias dc='git diff --cached'  # dc(1)
 alias s='git status'
 alias m='git branch --verbose'
 alias show='git show'
+alias gup='git add --update; git status --short --untracked-files=no'
 
 # typo fixes
 alias gti='git'
