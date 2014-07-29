@@ -7,6 +7,9 @@ alias ll='ls -1'
 alias lv='lv -c'
 alias bx='bundle exec'
 
+alias gp='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads | peco); git branch --verbose'
+bind '"\C-x\C-g":"gp\n"'
+
 # git shortcuts
 alias di='git diff'
 alias dc='git diff --cached'  # dc(1)
