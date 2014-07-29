@@ -39,5 +39,6 @@ NeoBundle 'vimtaku/hl_matchit.vim'
 NeoBundle 'nishigori/increment-activator'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-altr'
+NeoBundle 'airblade/vim-gitgutter'
 
 " Snippet

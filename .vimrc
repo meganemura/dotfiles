@@ -292,3 +292,7 @@ nmap <F3> <Plug>altr#back()
 call altr#remove_all()
 call altr#define('lib/%.rb',
 \                'spec/%_spec.rb')
+
+" vim-gitgutter
+noremap <Leader><Leader>g :<C-u>GitGutterToggle<Return>
+let g:gitgutter_sign_column_always = 1
