@@ -227,6 +227,9 @@ augroup MyFileTypeDetect
   autocmd BufNewFile,BufRead *.zj   set filetype=ruby
   autocmd BufNewFile,BufRead *.json set filetype=javascript
 
+  " Markdown
+  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
   " tracwiki
   autocmd BufNewFile,BufRead [tT]icket_*.txt  setfiletype tracwiki
   autocmd BufNewFile,BufRead [tT]icket_*.txt  set shiftwidth=2
