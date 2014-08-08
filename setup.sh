@@ -8,6 +8,7 @@ cd $DOTFILES_ROOT
 # ========
 dotfiles=(
     .bash_aliases
+    .bash_functions
     .gemrc
     .git_aliases
     .screenrc
