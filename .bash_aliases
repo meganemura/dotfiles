@@ -11,6 +11,7 @@ alias gp='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-co
 bind '"\C-x\C-g":"gp\n"'
 
 # git shortcuts
+alias co='git checkout'       # co(1)
 alias di='git diff'
 alias dc='git diff --cached'  # dc(1)
 alias s='git status'
