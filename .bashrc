@@ -1,9 +1,10 @@
 # setup.sh does not create symlink of this file.
 export PS1="\u@\h:\w\\$ "
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/bin:$PATH"
 export GOPATH=$HOME
 export EDITOR=vim
 
