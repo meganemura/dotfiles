@@ -18,6 +18,7 @@ alias s='git status'
 alias m='git branch --verbose'
 alias show='git show'
 alias gup='git add --update; git status --short --untracked-files=no'
+alias rebase='git rebase -i master'
 
 # typo fixes
 alias gti='git'
