@@ -1,4 +1,5 @@
 # setup.sh does not create symlink of this file.
+export PS1="\u@\h:\w\\$ "
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
