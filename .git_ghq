@@ -2,4 +2,4 @@
 # [include]
 #         path = ~/.git_ghq
 [ghq]
-        root = ~/projects
+        root = ~/src
