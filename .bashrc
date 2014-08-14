@@ -19,6 +19,10 @@ if [ -f /usr/local/etc/bash_completion.d/go-completion.bash ]; then
     . /usr/local/etc/bash_completion.d/go-completion.bash
 fi
 
+if [ -f /usr/local/Cellar/rbenv/0.4.0/completions/rbenv.bash ]; then
+    . /usr/local/Cellar/rbenv/0.4.0/completions/rbenv.bash
+fi
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
