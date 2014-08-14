@@ -15,6 +15,7 @@ dotfiles=(
     .bash_functions
     .gemrc
     .git_aliases
+    .git_ghq
     .screenrc
     .tmux.conf
     .vim
