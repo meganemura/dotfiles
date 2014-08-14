@@ -1,0 +1,5 @@
+# # put below lines to '.gitconfig'
+# [include]
+#         path = ~/.git_ghq
+[ghq]
+        root = ~/projects
