@@ -5,6 +5,7 @@ brew install bash-completion
 brew install git
 brew install go
 brew install lv
+brew install mercurial
 brew install rbenv
 brew install readline
 brew install ruby-build
