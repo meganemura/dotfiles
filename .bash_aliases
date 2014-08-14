@@ -7,9 +7,6 @@ alias ll='ls -1'
 alias lv='lv -c'
 alias bx='bundle exec'
 
-alias gp='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads | peco); git branch --verbose'
-bind '"\C-x\C-g":"gp\n"'
-
 # git shortcuts
 alias co='git checkout'       # co(1)
 alias di='git diff'
@@ -19,6 +16,10 @@ alias m='git branch --verbose'
 alias show='git show'
 alias gup='git add --update; git status --short --untracked-files=no'
 alias rebase='git rebase -i master'
+alias gp='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads | peco); git branch --verbose'
+bind '"\C-x\C-g":"gp\n"'
+alias gd='cd $(ghq list -p | peco)'
+
 
 # typo fixes
 alias gti='git'
