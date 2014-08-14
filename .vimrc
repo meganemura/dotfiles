@@ -61,6 +61,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 set wildmode=list:longest,full
 set wildignore+=*.pyc
 
+set backspace=indent,eol,start
 set nrformats=hex
 
 set ambiwidth=double
