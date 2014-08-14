@@ -10,7 +10,7 @@ brew install mercurial
 brew install rbenv
 brew install readline
 brew install ruby-build
-brew install tmux
+brew install tmux reattach-to-user-namespace
 brew install vim --with-lua
 brew install wget
 
