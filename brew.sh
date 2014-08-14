@@ -3,6 +3,7 @@ brew upgrade
 
 brew install bash-completion
 brew install git
+brew install go
 brew install lv
 brew install rbenv
 brew install readline
@@ -17,3 +18,11 @@ brew install caskroom/cask/brew-cask
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install iterm2
+
+brew tap peco/peco
+brew install peco
+
+brew tap motemen/ghq
+brew install ghq
+
+brew cleanup
