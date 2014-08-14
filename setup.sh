@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+# Home directory
+mkdir -p $HOME/bin
+mkdir -p $HOME/projects
+
 DOTFILES_ROOT=$(cd $(dirname $0); pwd)
 cd $DOTFILES_ROOT
 
@@ -43,6 +47,5 @@ vim -c "silent! NeoBundleInstall" -c quit > /dev/null 2>&1
       "Darwin" ) make -f make_mac.mak ;;
   esac
 ) > /dev/null
-
 
 echo "Finished!"
