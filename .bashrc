@@ -5,6 +5,8 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export EDITOR=vim
 
+stty stop undef
+
 # Includes
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     . /usr/local/etc/bash_completion.d/git-completion.bash
