@@ -8,7 +8,6 @@ alias lv='lv -c'
 alias bx='bundle exec'
 
 # git shortcuts
-alias co='git checkout'       # co(1)
 alias di='git diff'
 alias dc='git diff --cached'  # dc(1)
 alias s='git status'
@@ -16,7 +15,7 @@ alias m='git branch --verbose'
 alias show='git show'
 alias gup='git add --update; git status --short --untracked-files=no'
 alias rebase='git rebase -i master'
-alias gp='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads | peco --prompt="Branch>"); git branch --verbose'
+alias co='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads | peco --prompt="Branch>"); git branch --verbose'
 bind '"\C-x\C-g":"gp\n"'
 alias gd='cd $(ghq list -p | peco --prompt="Repository>")'
 
