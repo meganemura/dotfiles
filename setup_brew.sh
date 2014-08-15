@@ -7,6 +7,7 @@ brew install go
 brew install heroku-toolbelt
 brew install lv
 brew install mercurial
+brew install node
 brew install rbenv
 brew install readline
 brew install ruby-build
