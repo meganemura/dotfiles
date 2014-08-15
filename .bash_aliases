@@ -16,9 +16,9 @@ alias m='git branch --verbose'
 alias show='git show'
 alias gup='git add --update; git status --short --untracked-files=no'
 alias rebase='git rebase -i master'
-alias gp='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads | peco); git branch --verbose'
+alias gp='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads | peco --prompt="Branch>"); git branch --verbose'
 bind '"\C-x\C-g":"gp\n"'
-alias gd='cd $(ghq list -p | peco)'
+alias gd='cd $(ghq list -p | peco --prompt="Repository>")'
 
 
 # typo fixes
