@@ -7,6 +7,7 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/bin:$PATH"
 export GOPATH=$HOME
 export EDITOR=vim
+export CLICOLOR=1
 
 stty stop undef
 
