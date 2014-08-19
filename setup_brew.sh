@@ -21,6 +21,8 @@ brew install caskroom/cask/brew-cask
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install iterm2
+brew cask install karabiner
+brew cask install seil
 
 brew tap peco/peco
 brew install peco
