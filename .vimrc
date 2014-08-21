@@ -228,6 +228,7 @@ augroup MyFileTypeDetect
   autocmd BufNewFile,BufRead .git_* set filetype=gitconfig
   autocmd BufNewFile,BufRead *.wsgi set filetype=python
   autocmd BufNewFile,BufRead *.zj   set filetype=ruby
+  autocmd BufNewFile,BufRead *.opal set filetype=ruby
   autocmd BufNewFile,BufRead *.json set filetype=javascript
 
   " Markdown
