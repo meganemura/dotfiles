@@ -9,12 +9,14 @@ pecorake() {
   }
 alias prake='pecorake'
 
+
 follow_upstream() {
   git fetch --prune origin upstream
   git checkout master
   git merge --ff-only upstream/master
   git push origin master
 }
+
 
 _peco_checkout_branch() {
   branches=$(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads)
@@ -24,3 +26,13 @@ _peco_checkout_branch() {
   git branch --verbose
 }
 alias co='_peco_checkout_branch'
+
+
+# Edit last committed files
+function _edit_last_committed_files() {
+  base=$(git rev-parse --show-toplevel 2> /dev/null)
+  last_committed_files=$(git diff-tree --no-commit-id --name-only -r HEAD 2> /dev/null)
+  files=$(for file in $last_committed_files; do echo $base/$file; done)
+  test "$files" && vim -p $files
+}
+alias el='_edit_last_committed_files'
