@@ -15,3 +15,12 @@ follow_upstream() {
   git merge --ff-only upstream/master
   git push origin master
 }
+
+_peco_checkout_branch() {
+  branches=$(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads)
+  branch=$(echo "$branches" | peco --prompt="Branch>")
+  git checkout $branch
+
+  git branch --verbose
+}
+alias co='_peco_checkout_branch'

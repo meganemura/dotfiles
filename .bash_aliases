@@ -15,7 +15,6 @@ alias m='git branch --verbose'
 alias show='git show'
 alias gup='git add --update; git status --short --untracked-files=no'
 alias rebase='git rebase -i master'
-alias co='git checkout $(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads | peco --prompt="Branch>"); git branch --verbose'
 alias gd='cd $(ghq list -p | peco --prompt="Repository>")'
 
 
