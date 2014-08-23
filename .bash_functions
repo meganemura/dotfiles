@@ -8,3 +8,10 @@ pecorake() {
     [ ! -z $task ] && $rake $task
   }
 alias prake='pecorake'
+
+follow_upstream() {
+  git fetch --prune origin upstream
+  git checkout master
+  git merge --ff-only upstream/master
+  git push origin master
+}
