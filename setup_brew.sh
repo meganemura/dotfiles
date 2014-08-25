@@ -11,6 +11,7 @@ brew install node
 brew install rbenv
 brew install readline
 brew install ruby-build
+brew install scala
 brew install tmux reattach-to-user-namespace
 brew install tree
 brew install vim --with-lua
