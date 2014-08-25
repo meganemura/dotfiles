@@ -11,6 +11,11 @@ export CLICOLOR=1
 
 stty stop undef
 
+# scala
+export SCALA_HOME="/usr/local/Cellar/scala/2.11.2"
+export PATH="$PATH:$SCALA_HOME/bin"
+
+
 # Includes
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     . /usr/local/etc/bash_completion.d/git-completion.bash
@@ -18,6 +23,10 @@ fi
 
 if [ -f /usr/local/etc/bash_completion.d/go-completion.bash ]; then
     . /usr/local/etc/bash_completion.d/go-completion.bash
+fi
+
+if [ -f /usr/local/etc/bash_completion.d/scala ]; then
+    . /usr/local/etc/bash_completion.d/scala
 fi
 
 if [ -f /usr/local/Cellar/rbenv/0.4.0/completions/rbenv.bash ]; then
