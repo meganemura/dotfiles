@@ -5,6 +5,7 @@
 alias ll='ls -1'
 
 alias lv='lv -c'
+alias tree='tree --charset=C'
 alias bx='bundle exec'
 
 # git shortcuts
