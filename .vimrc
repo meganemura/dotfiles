@@ -154,7 +154,7 @@ noremap <Leader>C :<C-u>call <SID>left_tabnew()<Return>
 imap <silent> <C-d><C-d> <C-r>=strftime("%Y-%m-%d")<Return>
 
 " Ruby
-imap <silent> <C-l> =>
+imap <silent> <C-l> <Space>=><Space>
 
 " Easy to edit vimrc (vim-users.jp/hack74)
 " ----------------------------------------
