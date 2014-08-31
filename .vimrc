@@ -195,11 +195,18 @@ nnoremap Y y$
 call unite#custom#profile('default', 'context', {
 \   'start_insert': 1,
 \ })
-nnoremap <silent> <C-n>      :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-inoremap <silent> <C-n> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+nnoremap <silent> <C-n>      :<C-u>UniteWithBufferDir -no-split -buffer-name=files file file/new<CR>
+inoremap <silent> <C-n> <ESC>:<C-u>UniteWithBufferDir -no-split -buffer-name=files file file/new<CR>
 nnoremap <silent> <C-p>      :<C-u>Unite buffer file_mru<CR>
 inoremap <silent> <C-p> <ESC>:<C-u>Unite buffer file_mru<CR>
 nnoremap <silent> <C-t>      :<C-u>Unite tab<CR>
+
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+  " Overwrite settings.
+  imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
+  imap <buffer> '     <Plug>(unite_quick_match_default_action)
+endfunction
 
 
 " neocomplcache
