@@ -9,6 +9,7 @@ dotfiles=(
     .git_aliases
     .git_ghq
     .screenrc
+    .tigrc
     .tmux.conf
     .vim
     .vimrc

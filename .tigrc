@@ -1,0 +1,16 @@
+set show-date = no
+set show-graph = yes
+
+set vertical-split = yes
+set split-view-height = 80%
+
+
+# Remove default bindings {
+bind generic G none
+# }
+
+bind generic g move-first-line
+bind generic G move-last-line
+
+bind generic J Down
+bind generic K Up`
