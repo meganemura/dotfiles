@@ -191,9 +191,10 @@ nnoremap Y y$
 
 " unite.vim
 " ---------
-let g:unite_enable_start_insert=1
-let g:unite_enable_split_vertically=0
-let g:unite_source_file_mru_time_format='(%Y/%m/%d %T) '
+
+call unite#custom#profile('default', 'context', {
+\   'start_insert': 1,
+\ })
 nnoremap <silent> <C-n>      :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 inoremap <silent> <C-n> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 nnoremap <silent> <C-p>      :<C-u>Unite buffer file_mru<CR>
