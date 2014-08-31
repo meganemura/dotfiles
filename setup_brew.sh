@@ -2,7 +2,7 @@ brew update
 brew upgrade
 
 brew install bash-completion
-brew install git
+brew install git hub
 brew install go
 brew install heroku-toolbelt
 brew install lv

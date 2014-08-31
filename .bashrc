@@ -21,6 +21,10 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
     . /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
+if [ -f /usr/local/etc/bash_completion.d/hub.bash_completion.sh ]; then
+    . /usr/local/etc/bash_completion.d/hub.bash_completion.sh
+fi
+
 if [ -f /usr/local/etc/bash_completion.d/go-completion.bash ]; then
     . /usr/local/etc/bash_completion.d/go-completion.bash
 fi
