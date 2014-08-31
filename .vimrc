@@ -211,11 +211,6 @@ let g:neocomplcache_enable_at_startup=1
 let g:neocomplete#enable_at_startup = 1
 
 
-" easymotion
-" ----------
-let g:EasyMotion_keys = 'fjdkslaureiwoqpvncm'
-
-
 " vim-airline
 " -----------
 let g:airline_powerline_fonts = 0
