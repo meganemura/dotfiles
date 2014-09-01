@@ -1,3 +1,4 @@
+# vim: set ft=sh:
 # # put below lines to '.bashrc'
 # if [ -f ~/.bash_functions ]; then
 #     . ~/.bash_functions
