@@ -8,6 +8,7 @@ brew install heroku-toolbelt
 brew install lv
 brew install mercurial
 brew install node
+brew install pt
 brew install rbenv
 brew install readline
 brew install ruby-build
