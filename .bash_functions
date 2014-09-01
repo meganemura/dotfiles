@@ -29,6 +29,13 @@ _peco_checkout_branch() {
 alias co='_peco_checkout_branch'
 
 
+_peco_change_directory_ghq() {
+  dir=$(ghq list -p | peco --prompt="Repository>")
+  test "$dir" && cd $dir
+}
+alias gd='_peco_change_directory_ghq'
+
+
 # Edit last committed files
 function _last_committed_files() {
   local ref=${@:-HEAD}
