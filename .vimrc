@@ -196,14 +196,16 @@ call unite#custom#profile('default', 'context', {
 \ })
 nnoremap <silent> <C-n>      :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 inoremap <silent> <C-n> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-nnoremap <silent> <C-p>      :<C-u>Unite buffer file_mru<CR>
-inoremap <silent> <C-p> <ESC>:<C-u>Unite buffer file_mru<CR>
+nnoremap <silent> <C-p>      :<C-u>Unite file_rec/async<CR>
+inoremap <silent> <C-p> <ESC>:<C-u>Unite file_rec/async<CR>
 nnoremap <silent> <C-t>      :<C-u>Unite tab<CR>
 
 nnoremap <silent> ,g         :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> ,cg        :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-r><C-w><CR>
 nnoremap <silent> ,r         :<C-u>UniteResume search-buffer<CR>
+
 if executable('pt')
+  let g:unite_source_rec_async_command  = 'pt --nocolor --nogroup -g .'
   let g:unite_source_grep_command       = 'pt'
   let g:unite_source_grep_default_opts  = '--nogroup --nocolor'
   let g:unite_source_grep_recursive_opt = ''
