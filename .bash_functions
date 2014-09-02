@@ -59,3 +59,16 @@ function _peco_select_unstaged_files() {
   test "$files" && git add $files
 }
 alias pdd='_peco_select_unstaged_files'
+
+function _rename_current_branch() {
+  local tmpfile=$(mktemp 2> /dev/null || mktemp -t tmp)
+  trap "rm -f $tmpfile" EXIT
+
+  local branch=$(git rev-parse --abbrev-ref HEAD)
+  echo "$branch" > $tmpfile
+
+  EDITOR=${EDITOR:-vim}
+  $EDITOR $tmpfile
+  git branch -m $branch $(cat $tmpfile)
+}
+alias rename_current_branch='_rename_current_branch'
