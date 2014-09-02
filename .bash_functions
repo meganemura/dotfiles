@@ -50,3 +50,12 @@ function _edit_last_committed_files() {
   test "$files" && vim -p $files
 }
 alias el='_edit_last_committed_files'
+
+# Stage unstaged files using peco
+function _peco_select_unstaged_files() {
+  local base=$(git rev-parse --show-toplevel 2> /dev/null)
+  local unstaged_files=$(git status --porcelain | grep -v "??" | peco | awk -F ' ' '{print $NF}')
+  local files=$(for file in $unstaged_files; do echo $base/$file; done)
+  test "$files" && git add $files
+}
+alias pdd='_peco_select_unstaged_files'
