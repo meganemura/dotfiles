@@ -7,6 +7,7 @@ brew install go
 brew install heroku-toolbelt
 brew install lv
 brew install mercurial
+brew install mysql
 brew install node
 brew install pt
 brew install rbenv
