@@ -22,6 +22,8 @@ brew install wget
 # Homebrew Cask
 brew install caskroom/cask/brew-cask
 
+brew cask install VirtualBox vagrant
+brew cask install chefdk
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install iterm2
