@@ -6,7 +6,6 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neomru.vim'
 
 " Color Scheme
-NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-scripts/Lucius'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
@@ -36,5 +35,9 @@ NeoBundle 'nishigori/increment-activator'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-altr'
 NeoBundle 'airblade/vim-gitgutter'
+
+" Unite Sources
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'sorah/unite-bundler'
 
 " Snippet
