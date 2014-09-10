@@ -39,5 +39,6 @@ NeoBundle 'airblade/vim-gitgutter'
 " Unite Sources
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'sorah/unite-bundler'
+NeoBundle 'sorah/unite-ghq'
 
 " Snippet
