@@ -8,6 +8,7 @@ dotfiles=(
     .gemrc
     .git_aliases
     .git_ghq
+    .pryrc
     .screenrc
     .tigrc
     .tmux.conf
@@ -15,5 +16,5 @@ dotfiles=(
     .vimrc
 )
 for dotfile in ${dotfiles[@]}; do
-    ln -sfh $DOTFILES_ROOT/$dotfile ~/$dotfile || true
+    ln -s $DOTFILES_ROOT/$dotfile ~/$dotfile || true
 done
