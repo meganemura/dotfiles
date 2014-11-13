@@ -13,7 +13,7 @@ brew install pt
 brew install rbenv
 brew install readline
 brew install ruby-build
-brew install scala
+brew install scala giter8
 brew install tig
 brew install tmux reattach-to-user-namespace
 brew install tree
