@@ -35,6 +35,7 @@ NeoBundle 'nishigori/increment-activator'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-altr'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tyru/caw.vim'
 
 " Unite Sources
 NeoBundle 'ujihisa/unite-colorscheme'
