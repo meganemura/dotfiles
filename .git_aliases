@@ -33,6 +33,7 @@
           $EDITOR $tmpfile; \
           git branch -m $branch $(cat $tmpfile); \
         };f"
+        aliases = config --get-regexp alias
 
         # typo fixes
         lgo   = log
