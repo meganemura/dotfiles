@@ -2,7 +2,6 @@
 # [include]
 #         path = ~/.git_aliases
 [alias]
-        alias = !cat ~/.gitconfig
         br    = branch
         m     = branch --verbose  # branch with more info
         mr    = branch --verbose  # branch with more info
