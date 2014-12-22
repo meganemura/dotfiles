@@ -33,6 +33,7 @@
           git branch -m $branch $(cat $tmpfile); \
         };f"
         aliases = config --get-regexp alias
+        remotes = remote -v
 
         # typo fixes
         lgo   = log
