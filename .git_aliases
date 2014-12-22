@@ -13,7 +13,7 @@
         ca    = commit --verbose --amend
         dc    = diff --cached
         di    = diff
-        fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
+        fetch-pulls = "!fp() { git fetch ${1:-origin} +refs/pull/*:refs/remotes/pull/*; }; fp"
         lo    = log --oneline
         logs  = log --stat=80,200
         patches = log --patch --stat=80,200
