@@ -2,7 +2,6 @@
 # [include]
 #         path = ~/.git_aliases
 [alias]
-        alias = !cat ~/.gitconfig
         br    = branch
         m     = branch --verbose  # branch with more info
         mr    = branch --verbose  # branch with more info
@@ -13,11 +12,12 @@
         ca    = commit --verbose --amend
         dc    = diff --cached
         di    = diff
-        fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
+        fetch-pulls = "!fp() { git fetch ${1:-origin} +refs/pull/*:refs/remotes/pull/*; }; fp"
         lo    = log --oneline
         logs  = log --stat=80,200
         patches = log --patch --stat=80,200
         prigin = !git push origin $(git branch -a | grep '^*' | cut -b 3-)
+        remaster = rebase master
         s     = status --short
         st    = status
         sr    = svn rebase  # git-svn
@@ -32,6 +32,9 @@
           $EDITOR $tmpfile; \
           git branch -m $branch $(cat $tmpfile); \
         };f"
+        aliases = config --get-regexp alias
+        remotes = remote -v
+        branches = branch -a
 
         # typo fixes
         lgo   = log
