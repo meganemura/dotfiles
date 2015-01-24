@@ -2,6 +2,7 @@
 # [include]
 #         path = ~/.git_aliases
 [alias]
+        aliases = config --get-regexp alias
         br    = branch
         m     = branch --verbose  # branch with more info
         mr    = branch --verbose  # branch with more info
