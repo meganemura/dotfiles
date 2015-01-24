@@ -37,7 +37,7 @@
         remotes = remote -v
         branches = branch -a
         comm = "!f() { \
-          local candidates=$(git log --format='%s'); \
+          local candidates=$(git log --format='%s' | sort | uniq | grep -v \"^Merge\"); \
           local message=$(echo \"$candidates\" | peco); \
           test \"$message\" && git commit --verbose --edit --message=\"$message\"; \
         };f"
