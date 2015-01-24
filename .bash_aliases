@@ -4,6 +4,7 @@
 #     . ~/.bash_aliases
 # fi
 alias ll='ls -1'
+alias lll='ls -l'
 
 alias lv='lv -c'
 alias tree='tree --charset=C'
@@ -15,7 +16,7 @@ alias dc='git diff --cached'  # dc(1)
 alias s='git status'
 alias m='git branch --verbose'
 alias show='git show'
-alias gup='git add --update; git status --short --untracked-files=no'
+alias gup='git add --update :/; git status --short --untracked-files=no'
 alias rebase='git rebase -i master'
 
 
