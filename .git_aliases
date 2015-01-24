@@ -37,6 +37,13 @@
         remotes = remote -v
         branches = branch -a
 
+        # rebase
+        re-continue = rebase --continue
+        re-skip = rebase --skip
+        re-abort = rebase --abort
+        re-i = rebase --interactive
+        re-interactive = rebase --interactive
+
         # typo fixes
         lgo   = log
         lgos  = logs
