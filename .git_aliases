@@ -36,6 +36,11 @@
         aliases = config --get-regexp alias
         remotes = remote -v
         branches = branch -a
+        comm = "!f() { \
+          local candidates=$(git log --format='%s'); \
+          local message=$(echo \"$candidates\" | peco); \
+          test \"$message\" && git commit --verbose --edit --message=\"$message\"; \
+        };f"
 
         # rebase
         re-continue = rebase --continue
