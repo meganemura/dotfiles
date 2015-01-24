@@ -4,6 +4,7 @@
 #     . ~/.bash_aliases
 # fi
 alias ll='ls -1'
+alias lll='ls -l'
 
 alias lv='lv -c'
 alias tree='tree --charset=C'
