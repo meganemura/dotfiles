@@ -22,7 +22,7 @@
         s     = status --short
         st    = status
         sr    = svn rebase  # git-svn
-        up    = add --update
+        up    = add --update :/
         view  = log --all --decorate --graph --oneline
         rename-branch = "!f () { \
           local tmpfile=$(mktemp 2> /dev/null || mktemp -t tmp); \
