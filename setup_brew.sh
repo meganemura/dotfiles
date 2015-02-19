@@ -9,6 +9,7 @@ brew install lv
 brew install mercurial
 brew install mysql
 brew install node
+brew install postgresql
 brew install pt
 brew install rbenv
 brew install readline
