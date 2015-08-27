@@ -3,6 +3,7 @@
 # if [ -f ~/.bash_aliases ]; then
 #     . ~/.bash_aliases
 # fi
+alias l='ls -1'
 alias ll='ls -1'
 alias lll='ls -l'
 
