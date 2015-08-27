@@ -3,3 +3,6 @@
 #         path = ~/.git_ghq
 [ghq]
         root = ~/src
+
+[ghq "svn.java.net"]
+        vcs = svn

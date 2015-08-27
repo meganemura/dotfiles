@@ -15,6 +15,10 @@ stty stop undef
 export SCALA_HOME="/usr/local/Cellar/scala/2.11.2"
 export PATH="$PATH:$SCALA_HOME/bin"
 
+# python
+export PYENV_ROOT=/usr/local/opt/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 
 # Includes
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
