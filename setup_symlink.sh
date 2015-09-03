@@ -8,6 +8,7 @@ dotfiles=(
     .gemrc
     .git_aliases
     .git_ghq
+    .npmrc
     .pryrc
     .screenrc
     .tigrc
