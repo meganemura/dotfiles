@@ -18,7 +18,7 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'skwp/vim-rspec'
 NeoBundle 'meganemura/tracwiki'
 NeoBundle 'brandonbloom/vim-proto'
-NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'derekwyatt/vim-scala'
 
