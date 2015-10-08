@@ -22,6 +22,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'othree/yajs.vim'
+NeoBundle 'fatih/vim-go'
 
 " Utilities
 NeoBundle 'tpope/vim-rails'
