@@ -244,6 +244,7 @@ augroup MyFileTypeDetect
   autocmd BufNewFile,BufRead *.zj   set filetype=ruby
   autocmd BufNewFile,BufRead *.opal set filetype=ruby
   autocmd BufNewFile,BufRead *.json set filetype=javascript
+  autocmd BufNewFile,BufRead *.es6  set filetype=javascript
 
   " Markdown
   autocmd BufNewFile,BufReadPost *.md set filetype=markdown
