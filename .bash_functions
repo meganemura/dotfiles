@@ -72,3 +72,5 @@ function _rename_current_branch() {
   git branch -m $branch $(cat $tmpfile)
 }
 alias rename_current_branch='_rename_current_branch'
+
+alias mws='cd ~/src/github.com/meganemura/'
