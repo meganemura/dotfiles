@@ -34,3 +34,5 @@ function gi () {
 
 alias uppercase="tr '[:lower:]' '[:upper:]'"
 alias lowercase="tr '[:upper:]' '[:lower:]'"
+
+alias jxa="osascript -l JavaScript"
