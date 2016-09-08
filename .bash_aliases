@@ -36,3 +36,6 @@ alias uppercase="tr '[:lower:]' '[:upper:]'"
 alias lowercase="tr '[:upper:]' '[:lower:]'"
 
 alias jxa="osascript -l JavaScript"
+alias reload-docker-env='eval $(docker-machine env)'
+alias gg='cd ~/src/github.com/$USER'
+alias update-gemfile-lock='git add Gemfile.lock; git commit -m"Update Gemfile.lock"'
