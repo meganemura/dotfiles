@@ -73,11 +73,12 @@ nmap <Leader>l :<C-u>set invnumber<Return>
 
 set laststatus=2
 set t_Co=256
-set background=dark
 syntax enable
 "silent! colorscheme molokai
 "colorscheme desert
-colorscheme railscasts
+"colorscheme railscasts
+set background=dark
+colorscheme gruvbox
 
 
 " Mouse Support
