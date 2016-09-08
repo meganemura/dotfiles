@@ -48,3 +48,5 @@ fi
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
+
+#export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
