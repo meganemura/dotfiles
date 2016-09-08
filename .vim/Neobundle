@@ -10,6 +10,7 @@ NeoBundle 'vim-scripts/Lucius'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'morhetz/gruvbox'
 
 " FileType Plugins
 NeoBundle 'vim-ruby/vim-ruby'
@@ -23,6 +24,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'mxw/vim-jsx'
 
 " Utilities
 NeoBundle 'tpope/vim-rails'
