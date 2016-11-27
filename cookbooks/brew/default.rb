@@ -1,20 +1,15 @@
-require "itamae/plugin/resource/cask"
-
 execute 'brew' do
+  command 'brew cleanup'
   command 'brew update'
-  command 'brew upgrade'
 end
 
 packages = %w(
   bash-completion
-  git hub
+  git
   go
   heroku-toolbelt
   lv
   mercurial
-  mysql
-  node
-  postgresql
   the_platinum_searcher
   rbenv
   readline
@@ -25,7 +20,7 @@ packages = %w(
   tree
   vim\ --with-lua
   wget
-  caskroom/cask/brew-cask
+  ghq
 )
 packages.map(&:split).each do |pkg, *opts|
   package pkg do
@@ -33,25 +28,10 @@ packages.map(&:split).each do |pkg, *opts|
   end
 end
 
-casks = %w(
-  virtualbox vagrant
-  chefdk
-  google-chrome
-  google-japanese-ime
-  iterm2
-  karabiner
-  seil
-)
-casks.each do |app|
-  cask app
-end
-
 execute 'brew tap' do
   command 'brew tap peco/peco'
-  command 'brew tap motemen/ghq'
 end
 package 'peco'
-package 'ghq'
 
 execute 'brew cleanup' do
   command 'brew cleanup'
