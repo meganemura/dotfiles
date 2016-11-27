@@ -3,6 +3,8 @@ set -e
 
 bin/setup-mitamae
 
+git submodule init && git submodule update --depth 1
+
 # Homebrew does not allow sudo.
 case "$(uname)" in
   "Darwin") bin/mitamae local lib/recipe.rb ;;
