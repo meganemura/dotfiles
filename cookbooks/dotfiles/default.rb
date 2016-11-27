@@ -17,5 +17,6 @@ repository_root = File.expand_path('../../../', __FILE__)
 ).each do |target|
   link "#{home_dir}/#{target}" do
     to "#{repository_root}/#{target}"
+    force
   end
 end
