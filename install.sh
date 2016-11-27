@@ -3,7 +3,7 @@ set -e
 
 bin/setup-mitamae
 
-git submodule init && git submodule update --depth 1
+git submodule init && git submodule update
 
 # Homebrew does not allow sudo.
 case "$(uname)" in
