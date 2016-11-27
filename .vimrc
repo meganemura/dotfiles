@@ -10,10 +10,6 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-let g:neobundle_default_git_protocol='https'
-
 if filereadable(expand('~/.vim/Neobundle'))
   source ~/.vim/Neobundle
 endif

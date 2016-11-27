@@ -1,5 +1,9 @@
 " vim: set filetype=vim:
 
+let g:neobundle_default_git_protocol='https'
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplete'
@@ -47,3 +51,5 @@ NeoBundle 'sorah/unite-bundler'
 NeoBundle 'sorah/unite-ghq'
 
 " Snippet
+
+call neobundle#end()
