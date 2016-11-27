@@ -50,3 +50,5 @@ if [ -f ~/.bash_functions ]; then
 fi
 
 #export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="$HOME/.node/bin:$PATH"
+export DISABLE_SPRING=1
