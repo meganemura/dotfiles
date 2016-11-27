@@ -1,3 +1,8 @@
+execute 'Install brew' do
+  command '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+  not_if 'which brew'
+end
+
 execute 'brew' do
   command 'brew cleanup'
   command 'brew update'
