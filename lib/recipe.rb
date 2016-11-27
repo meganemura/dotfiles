@@ -5,4 +5,5 @@ include_recipe File.join(root_dir, 'cookbooks', 'ruby')
 
 if node[:platform] == 'darwin'
   include_recipe File.join(root_dir, 'cookbooks', 'mac')
+  include_recipe File.join(root_dir, 'cookbooks', 'brew')
 end
