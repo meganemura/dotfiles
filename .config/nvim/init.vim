@@ -1,28 +1,69 @@
 " boot
 autocmd!
 
-" NeoBundle
-" ---------
-set nocompatible
-filetype off
+" dein.vim
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/.config/nvim/.cache/repos/github.com/Shougo/dein.vim/
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+if dein#load_state('~/.config/nvim/.cache')
+  call dein#begin('~/.config/nvim/.cache')
+
+  call dein#add('~/.config/nvim/.cache/repos/github.com/Shougo/dein.vim/')
+  call dein#add('Shougo/vimproc')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/neocomplete')
+  call dein#add('Shougo/neomru.vim')
+
+  "" Color Scheme
+  call dein#add('vim-scripts/Lucius')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('tomasr/molokai')
+  call dein#add('jpo/vim-railscasts-theme')
+  call dein#add('morhetz/gruvbox')
+
+  " FileType Plugins
+  call dein#add('vim-ruby/vim-ruby')
+  call dein#add('tpope/vim-markdown')
+  call dein#add('cakebaker/scss-syntax.vim')
+  call dein#add('skwp/vim-rspec')
+  call dein#add('meganemura/tracwiki')
+  call dein#add('brandonbloom/vim-proto')
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('derekwyatt/vim-scala')
+  call dein#add('othree/yajs.vim')
+  call dein#add('fatih/vim-go')
+  call dein#add('mxw/vim-jsx')
+  " Utilities
+  call dein#add('tpope/vim-rails')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('timcharper/textile.vim')
+  call dein#add('vim-scripts/camelcasemotion')
+  call dein#add('vim-scripts/svn-diff.vim')
+  call dein#add('bling/vim-airline')
+  call dein#add('houtsnip/vim-emacscommandline')
+  call dein#add('vimtaku/hl_matchit.vim')
+  call dein#add('nishigori/increment-activator')
+  call dein#add('tpope/vim-surround')
+  call dein#add('kana/vim-altr')
+  call dein#add('airblade/vim-gitgutter')
+  call dein#add('tyru/caw.vim')
+
+  " Unite Sources
+  call dein#add('ujihisa/unite-colorscheme')
+  call dein#add('sorah/unite-bundler')
+  call dein#add('sorah/unite-ghq')
+
+  call dein#end()
+  call dein#save_state()
 endif
 
-if filereadable(expand('~/.vim/Neobundle'))
-  source ~/.vim/Neobundle
-endif
+"call dein#install()
 
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
-
-" NeoBundleInstall
-if neobundle#exists_not_installed_bundles()
-  autocmd VimEnter * NeoBundleInstall
-endif
-
+filetype plugin indent on
+syntax enable
 
 " tab, encoding, etc...
 " ------------------
