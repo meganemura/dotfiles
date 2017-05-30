@@ -19,6 +19,14 @@ follow_upstream() {
 }
 
 
+follow_upstream_staging() {
+  git fetch --prune upstream
+  git checkout staging
+  git merge --ff-only upstream/staging
+  git push origin staging
+}
+
+
 _peco_checkout_branch() {
   branches=$(git for-each-ref --format="%(refname:short)" --sort=-committerdate refs/heads)
   branch=$(echo "$branches" | peco --prompt="Branch>")

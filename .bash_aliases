@@ -39,3 +39,7 @@ alias jxa="osascript -l JavaScript"
 alias reload-docker-env='eval $(docker-machine env)'
 alias gg='cd ~/src/github.com/$USER'
 alias update-gemfile-lock='git add Gemfile.lock; git commit -m"Update Gemfile.lock"'
+
+alias u="cd .."
+
+alias cleanup-branches="git branch | grep pr- | xargs git br -D"
