@@ -14,6 +14,7 @@ repository_root = File.expand_path('../../../', __FILE__)
   .tmux.conf
   .vim
   .vimrc
+  .config
 ).each do |target|
   link "#{home_dir}/#{target}" do
     to "#{repository_root}/#{target}"
