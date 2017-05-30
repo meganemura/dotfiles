@@ -11,6 +11,7 @@ packages = %w(
   lv
   mercurial
   peco
+  python3
   rbenv
   readline
   ruby-build
