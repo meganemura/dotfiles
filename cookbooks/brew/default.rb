@@ -8,7 +8,6 @@ packages = %w(
   ghq
   git
   go
-  heroku-toolbelt
   lv
   mercurial
   peco
