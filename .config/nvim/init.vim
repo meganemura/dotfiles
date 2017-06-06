@@ -1,4 +1,5 @@
 " boot
+let $LANG = "en"
 autocmd!
 
 " dein.vim
@@ -13,8 +14,11 @@ if dein#load_state('~/.config/nvim/.cache')
   call dein#add('~/.config/nvim/.cache/repos/github.com/Shougo/dein.vim/')
   call dein#add('Shougo/vimproc')
   call dein#add('Shougo/unite.vim')
-  call dein#add('Shougo/neocomplete')
+  call dein#add('Shougo/deoplete.nvim')
   call dein#add('Shougo/neomru.vim')
+
+  " deoplete
+  call dein#add('Shougo/deoplete-rct')
 
   "" Color Scheme
   call dein#add('vim-scripts/Lucius')
@@ -64,6 +68,9 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+" Enable deoplete
+let g:deoplete#enable_at_startup = 1
 
 " tab, encoding, etc...
 " ------------------
