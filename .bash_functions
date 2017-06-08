@@ -12,17 +12,17 @@ alias prake='pecorake'
 
 
 follow_upstream() {
-  git fetch --prune upstream
-  git checkout master
-  git merge --ff-only upstream/master
+  git fetch --prune upstream && \
+  git checkout master && \
+  git merge --ff-only upstream/master && \
   git push origin master
 }
 
 
 follow_upstream_staging() {
-  git fetch --prune upstream
-  git checkout staging
-  git merge --ff-only upstream/staging
+  git fetch --prune upstream && \
+  git checkout staging && \
+  git merge --ff-only upstream/staging && \
   git push origin staging
 }
 
