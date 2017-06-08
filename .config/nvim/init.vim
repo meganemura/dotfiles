@@ -13,7 +13,7 @@ if dein#load_state('~/.config/nvim/.cache')
 
   call dein#add('~/.config/nvim/.cache/repos/github.com/Shougo/dein.vim/')
   call dein#add('Shougo/vimproc')
-  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/denite.nvim')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('Shougo/neomru.vim')
 
@@ -235,35 +235,38 @@ nnoremap Y y$
 " Plugin Configurations
 " =====================
 
+" denite.nvim
+" -----------
+nnoremap <silent> <C-n>      :<C-u>DeniteBufferDir -buffer-name=files file<CR>
+inoremap <silent> <C-n> <ESC>:<C-u>DeniteBufferDir -buffer-name=files file<CR>
+nnoremap <silent> <C-p>      :<C-u>Denite file_rec<CR>
+inoremap <silent> <C-p> <ESC>:<C-u>Denite file_rec<CR>
+nnoremap <silent> <C-t>      :<C-u>Denite tab<CR>
+
 " unite.vim
 " ---------
-call unite#custom#profile('default', 'context', {
-\   'start_insert': 1,
-\ })
-nnoremap <silent> <C-n>      :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-inoremap <silent> <C-n> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-nnoremap <silent> <C-p>      :<C-u>Unite file_rec/async<CR>
-inoremap <silent> <C-p> <ESC>:<C-u>Unite file_rec/async<CR>
-nnoremap <silent> <C-t>      :<C-u>Unite tab<CR>
-
-nnoremap <silent> ,g         :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> ,cg        :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-r><C-w><CR>
-nnoremap <silent> ,r         :<C-u>UniteResume search-buffer<CR>
-
-if executable('pt')
-  let g:unite_source_rec_async_command  = 'pt --nocolor --nogroup -g .'
-  let g:unite_source_grep_command       = 'pt'
-  let g:unite_source_grep_default_opts  = '--nogroup --nocolor'
-  let g:unite_source_grep_recursive_opt = ''
-endif
-
-autocmd FileType unite call s:unite_settings()
-function! s:unite_settings()
-  " Overwrite settings.
-  imap <buffer>         <C-w> <Plug>(unite_delete_backward_path)
-  imap <buffer>         '     <Plug>(unite_quick_match_default_action)
-  imap <buffer><nowait> <C-g> <Plug>(unite_exit)
-endfunction
+"call unite#custom#profile('default', 'context', {
+"\   'start_insert': 1,
+"\ })
+"
+"nnoremap <silent> ,g         :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+"nnoremap <silent> ,cg        :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-r><C-w><CR>
+"nnoremap <silent> ,r         :<C-u>UniteResume search-buffer<CR>
+"
+"if executable('pt')
+"  let g:unite_source_rec_async_command  = 'pt --nocolor --nogroup -g .'
+"  let g:unite_source_grep_command       = 'pt'
+"  let g:unite_source_grep_default_opts  = '--nogroup --nocolor'
+"  let g:unite_source_grep_recursive_opt = ''
+"endif
+"
+"autocmd FileType unite call s:unite_settings()
+"function! s:unite_settings()
+"  " Overwrite settings.
+"  imap <buffer>         <C-w> <Plug>(unite_delete_backward_path)
+"  imap <buffer>         '     <Plug>(unite_quick_match_default_action)
+"  imap <buffer><nowait> <C-g> <Plug>(unite_exit)
+"endfunction
 
 
 " neocomplcache
