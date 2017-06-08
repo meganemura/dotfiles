@@ -19,6 +19,7 @@ if dein#load_state('~/.config/nvim/.cache')
 
   " deoplete
   call dein#add('Shougo/deoplete-rct')
+  call dein#add('fishbullet/deoplete-ruby')
 
   "" Color Scheme
   call dein#add('vim-scripts/Lucius')
