@@ -4,3 +4,4 @@ bin/mitamae*
 .vim/snippets/*
 .vim/tmp/*
 .vim/undo/*
+.config/nvim/.netrwhist

@@ -42,5 +42,9 @@ alias update-gemfile-lock='git add Gemfile.lock; git commit -m"Update Gemfile.lo
 
 which tailf || alias tailf="tail -f"
 
-alias u='cd ..'
 alias c=code
+alias u="cd .."
+
+alias cleanup-branches="git branch | grep pr- | xargs git br -D"
+
+alias vim="nvim"

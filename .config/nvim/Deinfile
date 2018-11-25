@@ -1,0 +1,51 @@
+" vim: set filetype=vim:
+
+call dein#add('Shougo/vimproc')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neocomplete')
+call dein#add('Shougo/neomru.vim')
+
+"" Color Scheme
+"NeoBundle 'vim-scripts/Lucius'
+"NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'tomasr/molokai'
+"NeoBundle 'jpo/vim-railscasts-theme'
+"NeoBundle 'morhetz/gruvbox'
+"
+"" FileType Plugins
+"NeoBundle 'vim-ruby/vim-ruby'
+"NeoBundle 'tpope/vim-markdown'
+"NeoBundle 'cakebaker/scss-syntax.vim'
+"NeoBundle 'skwp/vim-rspec'
+"NeoBundle 'meganemura/tracwiki'
+"NeoBundle 'brandonbloom/vim-proto'
+"NeoBundle 'pangloss/vim-javascript'
+"NeoBundle 'kchmck/vim-coffee-script'
+"NeoBundle 'derekwyatt/vim-scala'
+"NeoBundle 'othree/yajs.vim'
+"NeoBundle 'fatih/vim-go'
+"NeoBundle 'mxw/vim-jsx'
+"
+"" Utilities
+"NeoBundle 'tpope/vim-rails'
+"NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'timcharper/textile.vim'
+"NeoBundle 'vim-scripts/camelcasemotion'
+"NeoBundle 'vim-scripts/svn-diff.vim'
+"NeoBundle 'bling/vim-airline'
+"NeoBundle 'houtsnip/vim-emacscommandline'
+"NeoBundle 'vimtaku/hl_matchit.vim'
+"NeoBundle 'nishigori/increment-activator'
+"NeoBundle 'tpope/vim-surround'
+"NeoBundle 'kana/vim-altr'
+"NeoBundle 'airblade/vim-gitgutter'
+"NeoBundle 'tyru/caw.vim'
+"
+"" Unite Sources
+"NeoBundle 'ujihisa/unite-colorscheme'
+"NeoBundle 'sorah/unite-bundler'
+"NeoBundle 'sorah/unite-ghq'
+"
+"" Snippet
+"
+"call neobundle#end()

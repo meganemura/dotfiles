@@ -5,33 +5,28 @@ end
 
 packages = %w(
   bash-completion
+  ghq
   git
   go
-  heroku-toolbelt
   lv
   mercurial
-  the_platinum_searcher
+  peco
+  python3
   rbenv
   readline
   ruby-build
-  scala giter8
+  the_platinum_searcher
   tig
   tmux reattach-to-user-namespace
   tree
   vim\ --with-lua
   wget
-  ghq
 )
 packages.map(&:split).each do |pkg, *opts|
   package pkg do
     options opts.join(' ') unless opts.empty?
   end
 end
-
-execute 'brew tap' do
-  command 'brew tap peco/peco'
-end
-package 'peco'
 
 execute 'brew cleanup' do
   command 'brew cleanup'
