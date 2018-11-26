@@ -29,6 +29,10 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'mxw/vim-jsx'
+NeoBundleLazy 'flowtype/vim-flow', {
+      \ 'autoload': {
+      \     'filetypes': 'javascript'
+      \ }}
 
 " Utilities
 NeoBundle 'tpope/vim-rails'

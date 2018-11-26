@@ -97,7 +97,7 @@ endif
 
 " CursorLine
 " ----------
-set cursorline
+"set cursorline
 highlight clear CursorLine
 highlight CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
@@ -152,6 +152,7 @@ imap <silent> <C-d><C-d> <C-r>=strftime("%Y-%m-%d")<Return>
 
 " Ruby
 imap <silent> <C-l> <Space>=><Space>
+imap <silent> <C-p> require 'pry'; binding.pry
 
 " Easy to edit vimrc (vim-users.jp/hack74)
 " ----------------------------------------
@@ -182,6 +183,9 @@ command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
 " -------------------------------------------------
 nnoremap Y y$
 
+" http://itchyny.hatenablog.com/entry/2014/12/25/090000
+set showmatch
+set matchtime=1
 
 " Plugin Configurations
 " =====================
@@ -193,8 +197,8 @@ call unite#custom#profile('default', 'context', {
 \ })
 nnoremap <silent> <C-n>      :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 inoremap <silent> <C-n> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-nnoremap <silent> <C-p>      :<C-u>Unite file_rec/async<CR>
-inoremap <silent> <C-p> <ESC>:<C-u>Unite file_rec/async<CR>
+"nnoremap <silent> <C-p>      :<C-u>Unite file_rec/async<CR>
+"inoremap <silent> <C-p> <ESC>:<C-u>Unite file_rec/async<CR>
 nnoremap <silent> <C-t>      :<C-u>Unite tab<CR>
 
 nnoremap <silent> ,g         :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
@@ -231,6 +235,10 @@ let g:neocomplete#enable_at_startup = 1
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 
+" vim-javascript
+" --------------
+let g:javascript_plugin_flow = 1
+
 " ftdetects
 " ---------
 augroup MyFileTypeDetect
@@ -239,6 +247,7 @@ augroup MyFileTypeDetect
   autocmd BufNewFile,BufRead .git_* set filetype=gitconfig
   autocmd BufNewFile,BufRead *.wsgi set filetype=python
   autocmd BufNewFile,BufRead *.zj   set filetype=ruby
+  autocmd BufNewFile,BufRead *.gemfile   set filetype=ruby
   autocmd BufNewFile,BufRead *.opal set filetype=ruby
   autocmd BufNewFile,BufRead *.json set filetype=javascript
   autocmd BufNewFile,BufRead *.go   set noexpandtab tabstop=4 shiftwidth=4
@@ -314,7 +323,9 @@ call altr#define('lib/%.rb',
 
 " vim-gitgutter
 noremap <Leader><Leader>g :<C-u>GitGutterToggle<Return>
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
+" let g:gitgutter_sign_column_always = 1
+" vim-gitgutter: please replace "let g:gitgutter_sign_column_always=1" with "set signcolumn=yes"
 
 " caw.vim
 nmap <Leader>/ <Plug>(caw:I:toggle)
