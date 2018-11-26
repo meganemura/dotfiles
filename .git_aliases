@@ -19,6 +19,7 @@
         patches = log --patch --stat=80,200
         prigin = !git push origin $(git branch -a | grep '^*' | cut -b 3-)
         remaster = rebase master
+        reimaster = rebase -i master
         s     = status --short
         st    = status
         sr    = svn rebase  # git-svn
@@ -56,3 +57,7 @@
         shwo  = show
         stl   = !clear && git status  # 'git st <C-l>'
         t     = status   # use with `alias gits='git'`
+        #cim   = commit -m"$ !!"
+        cim = "!f() { \
+          git commit -m\"$ !!\"; \
+        };f"
