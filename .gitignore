@@ -6,3 +6,4 @@ bin/mitamae*
 .vim/undo/*
 .config/nvim/.netrwhist
 .config/hub
+.config/*
