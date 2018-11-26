@@ -36,6 +36,15 @@ _peco_checkout_branch() {
 }
 alias co='_peco_checkout_branch'
 
+_peco_checkout_branch_and_bundle_install() {
+  _peco_checkout_branch
+  echo
+  echo '[bundle install]'
+  echo
+  bundle install
+}
+alias cob='_peco_checkout_branch_and_bundle_install'
+
 
 _peco_change_directory_ghq() {
   dir=$(ghq list -p | peco --prompt="Repository>")
@@ -59,6 +68,12 @@ function _edit_last_committed_files() {
 }
 alias el='_edit_last_committed_files'
 
+function _edit_last_committed_files_by_vscode() {
+  local files=$(_last_committed_files $@)
+  test "$files" && code -p $files
+}
+alias elc='_edit_last_committed_files_by_vscode'
+
 # Stage unstaged files using peco
 function _peco_select_unstaged_files() {
   local base=$(git rev-parse --show-toplevel 2> /dev/null)
@@ -75,7 +90,7 @@ function _rename_current_branch() {
   local branch=$(git rev-parse --abbrev-ref HEAD)
   echo "$branch" > $tmpfile
 
-  EDITOR=${EDITOR:-vim}
+  EDITOR="vim"
   $EDITOR $tmpfile
   git branch -m $branch $(cat $tmpfile)
 }
