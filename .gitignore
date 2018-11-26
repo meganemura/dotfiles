@@ -5,3 +5,4 @@ bin/mitamae*
 .vim/tmp/*
 .vim/undo/*
 .config/nvim/.netrwhist
+.config/hub
