@@ -45,6 +45,16 @@ which tailf || alias tailf="tail -f"
 alias c=code
 alias u="cd .."
 
-alias cleanup-branches="git branch | grep pr- | xargs git br -D"
+alias cleanup-branches="git branch | grep pr- | xargs git br -D; git branch | grep -v master | grep -v staging | xargs git br -d"
+alias vssh='vagrant ssh'
+alias cl="ruby -e 'puts \"　\" * 10000'"
 
-alias vim="nvim"
+alias sha256sum="shasum -a 256"
+alias git=hub
+
+alias vs='vagrant ssh'
+
+alias dp='docker-compose'
+alias docomo='docker-compose'
+alias dose='docker-compose'
+alias c='code'
